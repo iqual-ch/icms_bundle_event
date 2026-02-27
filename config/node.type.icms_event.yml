@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - node_title_help_text
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+  node_title_help_text:
+    title_help: "Main title used for the page's meta, menu label and admin display, provided these are not overridden in the corresponding places."
+name: Event
+type: icms_event
+description: 'Use <em>Events</em> to create and manage scheduled activities with structured data, taxonomy tags, and iCMS layout components.'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.icms_minimal
+    - node.type.icms_event
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.icms_event.body
+field_name: body
+entity_type: node
+bundle: icms_event
+label: Summary
+description: 'Short summary of the page. Used as description, meta description and teaser text, unless overridden in the corresponding fields.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - icms_minimal
+field_type: text_with_summary

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: icms_event_occurrence
+label: 'Event occurrence'
+icon_uuid: null
+icon_default: null
+description: 'The <em>Event Occurrence</em> represents a specific instance of an event, capturing the exact date, time, location, and other details unique to that particular occurrence.'
+behavior_plugins: {  }

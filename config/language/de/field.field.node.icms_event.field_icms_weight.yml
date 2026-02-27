@@ -1,0 +1,2 @@
+label: Sortierung
+description: 'Bestimmt die Sortierung der Einträge. Größere Werte werden zuerst angezeigt. Dieses Feld überschreibt die Standardsortierung nach dem Veröffentlichungsdatum.'

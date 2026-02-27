@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icms_address
+    - paragraphs.paragraphs_type.icms_event_occurrence
+  module:
+    - address
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.icms_event_occurrence.field_icms_address
+field_name: field_icms_address
+entity_type: paragraph
+bundle: icms_event_occurrence
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    CH: CH
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    addressLine1:
+      override: required
+    addressLine2:
+      override: optional
+    addressLine3:
+      override: hidden
+    postalCode:
+      override: required
+    dependentLocality:
+      override: hidden
+    locality:
+      override: required
+  fields: {  }
+field_type: address

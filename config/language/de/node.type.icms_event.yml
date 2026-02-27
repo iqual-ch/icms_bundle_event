@@ -1,0 +1,5 @@
+name: Ereignis
+description: 'Verwende <em>Ereignis</em>, um geplante Aktivitäten mit strukturierten Daten, Taxonomie-Tags und ICMS-Layout-Komponenten zu erstellen.'
+third_party_settings:
+  node_title_help_text:
+    title_help: 'Haupttitel der Seite. Wird für Meta-Daten, Menüeintrag und die Anzeige im Backend verwendet, sofern diese an den entsprechenden Stellen nicht überschrieben werden.'

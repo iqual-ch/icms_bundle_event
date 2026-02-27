@@ -1,0 +1,32 @@
+third_party_settings:
+  field_group:
+    group_meta:
+      label: Meta-Informationen
+      format_settings:
+        description: 'Gib wichtige Informationen zur Seite ein, die nicht Teil des Hauptinhalts sind (Verwendung im Backend, zu SEO-Zwecken oder für Teaser-Elemente).'
+    group_seo:
+      format_settings:
+        description: 'Passen Sie Metatags und Sitemap-Einstellungen für diese Seite an, um deren Darstellung in Suchmaschinen zu steuern.'
+    group_teaser:
+      label: Teaser-Einstellungen
+      format_settings:
+        description: 'Einstellungen, wie diese Seite in Teasern, Vorschauen und Listen dargestellt wird.'
+    group_content:
+      format_settings:
+        description: 'Bearbeiten Sie Layout und Inhalt der Seite mit der klassischen Oberfläche.'
+content:
+  body:
+    third_party_settings:
+      maxlength:
+        maxlength_js_label: 'Inhalt auf @limit Zeichen begrenzt, verbleibend: <strong>@remaining</strong>'
+        maxlength_js_label_summary: 'Inhalt auf @limit Zeichen begrenzt, verbleibend: <strong>@remaining</strong>'
+  field_icms_teaser_link_label:
+    settings:
+      placeholder: 'Mehr lesen'
+    third_party_settings:
+      maxlength:
+        maxlength_js_label: 'Inhalt auf @limit Zeichen begrenzt, verbleibend: <strong>@remaining</strong>'
+  field_icms_teaser_title:
+    third_party_settings:
+      maxlength:
+        maxlength_js_label: 'Inhalt auf @limit Zeichen begrenzt, verbleibend: <strong>@remaining</strong>'

@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: icms_events_de
+label: 'Events (DE)'
+type: 'canonical_entities:node'
+pattern: '/veranstaltungen/[node:title]'
+selection_criteria:
+  732bd72b-0518-4d95-b479-92c8677ba347:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 732bd72b-0518-4d95-b479-92c8677ba347
+    context_mapping:
+      node: node
+    bundles:
+      icms_event: icms_event
+  f143c970-dd54-471b-b34e-31332bc7148f:
+    id: language
+    negate: false
+    uuid: f143c970-dd54-471b-b34e-31332bc7148f
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      de: de
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

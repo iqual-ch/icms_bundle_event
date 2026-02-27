@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_blokkli
+id: icms_layout_event
+label: Event
+icon_uuid: null
+icon_default: null
+description: 'The <em>Event</em> provides functionalities and data structures to capture scheduled activities, enriched with structured data as needed.'
+behavior_plugins:
+  paragraphs_blokkli_data:
+    enabled: true

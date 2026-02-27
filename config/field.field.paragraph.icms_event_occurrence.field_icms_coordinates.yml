@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icms_coordinates
+    - paragraphs.paragraphs_type.icms_event_occurrence
+  module:
+    - geolocation
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.icms_event_occurrence.field_icms_coordinates
+field_name: field_icms_coordinates
+entity_type: paragraph
+bundle: icms_event_occurrence
+label: Geocoordinates
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

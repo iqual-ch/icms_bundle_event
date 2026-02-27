@@ -1,0 +1,65 @@
+name: 'ICMS Event Recipe'
+description: 'A content type and layout for publishing events.'
+type: 'Site'
+
+install:
+  # Core
+  - node
+  - user
+  - views
+  # Contrib
+  - blokkli_starterkit
+  - graphql_core_schema
+  - paragraphs
+  - search_api
+  - conditional_fields
+  - geolocation
+  - geolocation_leaflet
+  - smart_date
+  - schema_event
+  - webform
+  - webform_views
+  # Bundle Logic
+  - icms_bundle_event_logic
+
+config:
+  import:
+    # Contrib
+    smart_date: "*"
+  actions:
+  # Enable the paragraph type on all node types
+    field.field.node.*.field_icms_paragraphs:
+      simple_config_update:
+        settings.handler_settings.target_bundles.icms_layout_event: icms_layout_event
+        settings.handler_settings.target_bundles_drag_drop.icms_layout_event.enabled: true
+    paragraphs_blokkli.settings:
+      'simpleConfigArray:append':
+        property: enabled_types.node
+        values: [icms_event]
+  # Enable content type on teaser layout
+    field.field.paragraph.icms_layout_teasers.field_icms_content_entities:
+      simple_config_update:
+        settings.handler_settings.target_bundles.icms_event: icms_event
+  # Add the content type to the editorial workflow
+    workflows.workflow.editorial:
+      addNodeTypes: [icms_event]
+  # Add the content type to the default view mode
+  # GraphQL Core Schema
+
+    graphql.graphql_servers.graphql:
+      simple_config_update:
+        # Enable custom extensions and fields for events
+        schema_configuration.core_composable.extensions.reverse_entity_reference: reverse_entity_reference
+        # icms_event node and its specific fields
+        schema_configuration.core_composable.bundles.node.icms_event.enabled: true
+        schema_configuration.core_composable.fields.node.field_icms_event_occurrence: field_icms_event_occurrence
+        schema_configuration.core_composable.fields.node.field_icms_webform: field_icms_webform
+        # icms_layout_event paragraph and its fields.
+        schema_configuration.core_composable.bundles.paragraph.icms_layout_event.enabled: true
+        schema_configuration.core_composable.fields.paragraph.field_icms_topics: field_icms_topics
+        schema_configuration.core_composable.fields.paragraph.field_icms_listing_type: field_icms_listing_type
+        # icms_event_occurrence paragraph and its fields.
+        schema_configuration.core_composable.bundles.paragraph.icms_event_occurrence.enabled: true
+        schema_configuration.core_composable.fields.paragraph.field_icms_address: field_icms_address
+        schema_configuration.core_composable.fields.paragraph.field_icms_coordinates: field_icms_coordinates
+        schema_configuration.core_composable.fields.paragraph.field_icms_date: field_icms_date

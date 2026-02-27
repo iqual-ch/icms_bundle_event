@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icms_event_occurrence
+    - node.type.icms_event
+    - paragraphs.paragraphs_type.icms_event_occurrence
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.icms_event.field_icms_event_occurrence
+field_name: field_icms_event_occurrence
+entity_type: node
+bundle: icms_event
+label: 'Event occurrence'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      icms_event_occurrence: icms_event_occurrence
+    negate: 0
+    target_bundles_drag_drop:
+      icms_event_occurrence:
+        weight: 0
+        enabled: true
+field_type: entity_reference_revisions

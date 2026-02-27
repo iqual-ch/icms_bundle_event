@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icms_weight
+    - node.type.icms_event
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.icms_event.field_icms_weight
+field_name: field_icms_weight
+entity_type: node
+bundle: icms_event
+label: 'Sort order'
+description: 'Defines the sorting order of the entries. Higher values are shown first. This field overrides the default sorting by publication date.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

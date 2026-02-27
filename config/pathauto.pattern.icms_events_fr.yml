@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: icms_events_fr
+label: 'Events (FR)'
+type: 'canonical_entities:node'
+pattern: '/evenements/[node:title]'
+selection_criteria:
+  0f45df03-ba4f-4d7e-8d51-d527ee966a42:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 0f45df03-ba4f-4d7e-8d51-d527ee966a42
+    context_mapping:
+      node: node
+    bundles:
+      icms_event: icms_event
+  23533371-c9c6-4d3e-8ee7-f40d52341fbb:
+    id: language
+    negate: false
+    uuid: 23533371-c9c6-4d3e-8ee7-f40d52341fbb
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      fr: fr
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

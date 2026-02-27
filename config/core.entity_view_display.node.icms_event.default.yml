@@ -1,0 +1,160 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.blokkli_node.default
+    - field.field.node.icms_event.body
+    - field.field.node.icms_event.field_blokkli_comments
+    - field.field.node.icms_event.field_icms_event_occurrence
+    - field.field.node.icms_event.field_icms_image
+    - field.field.node.icms_event.field_icms_paragraphs
+    - field.field.node.icms_event.field_icms_teaser_image
+    - field.field.node.icms_event.field_icms_teaser_link_label
+    - field.field.node.icms_event.field_icms_teaser_pretitle
+    - field.field.node.icms_event.field_icms_teaser_text
+    - field.field.node.icms_event.field_icms_teaser_title
+    - field.field.node.icms_event.field_icms_topics
+    - field.field.node.icms_event.field_icms_webform
+    - field.field.node.icms_event.field_icms_weight
+    - field.field.node.icms_event.field_metatags
+    - node.type.icms_event
+  module:
+    - comment
+    - entity_reference_revisions
+    - metatag
+    - text
+    - user
+    - webform
+id: node.icms_event.default
+targetEntityType: node
+bundle: icms_event
+mode: default
+content:
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_blokkli_comments:
+    type: comment_default
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_icms_event_occurrence:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 126
+    region: content
+  field_icms_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 119
+    region: content
+  field_icms_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_icms_teaser_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_icms_teaser_link_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_icms_teaser_pretitle:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_icms_teaser_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_icms_teaser_title:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_icms_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_icms_webform:
+    type: webform_entity_reference_entity_view
+    label: above
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 124
+    region: content
+  field_icms_weight:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

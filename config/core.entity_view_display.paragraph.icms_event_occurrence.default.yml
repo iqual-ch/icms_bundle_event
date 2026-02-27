@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.icms_event_occurrence.field_icms_address
+    - field.field.paragraph.icms_event_occurrence.field_icms_coordinates
+    - field.field.paragraph.icms_event_occurrence.field_icms_date
+    - paragraphs.paragraphs_type.icms_event_occurrence
+  module:
+    - address
+    - geolocation
+    - smart_date
+id: paragraph.icms_event_occurrence.default
+targetEntityType: paragraph
+bundle: icms_event_occurrence
+mode: default
+content:
+  field_icms_address:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icms_coordinates:
+    type: geolocation_latlng
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_icms_date:
+    type: smartdate_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      format: default
+      force_chronological: false
+      add_classes: false
+      time_wrapper: true
+      localize: false
+      parts:
+        - start
+        - end
+      duration:
+        separator: ' | '
+        unit: ''
+        decimals: 2
+        suffix: h
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

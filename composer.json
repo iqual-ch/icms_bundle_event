@@ -1,0 +1,31 @@
+{
+    "name": "iqual/icms_bundle_event",
+    "type": "drupal-recipe",
+    "description": "A content type and layout for publishing events.",
+    "keywords": [
+        "ICMS",
+        "recipe",
+        "Drupal recipes",
+        "drupal recipe"
+    ],
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://support-iqual.atlassian.net/wiki/spaces/ICMS/pages/4519755795/Layout+Event",
+        "source": "https://github.com/iqual-ch/blokkli-starterkit-sw-experiment"
+    },
+    "require": {
+        "iqual/blokkli_starterkit": "^1.0",
+        "iqual/icms_bundle_event_logic": "^1.0",
+        "drupal/conditional_fields": "^4.0@alpha",
+        "drupal/geolocation": "^4.0@beta",
+        "drupal/smart_date": "^4.2",
+        "drupal/multiple_fields_remove_button": "^2.3",
+        "drupal/webform": "^6.2",
+        "drupal/webform_views": "^5.6"
+
+    },
+    "version": "1.x-dev"
+}

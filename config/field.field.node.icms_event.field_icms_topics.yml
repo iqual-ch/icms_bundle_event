@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icms_topics
+    - node.type.icms_event
+    - taxonomy.vocabulary.icms_topics
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.icms_event.field_icms_topics
+field_name: field_icms_topics
+entity_type: node
+bundle: icms_event
+label: Topics
+description: 'Use <em>topics</em> to group content by subject and enable filtering across the site.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      icms_topics: icms_topics
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

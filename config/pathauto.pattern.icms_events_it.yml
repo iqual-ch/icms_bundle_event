@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: icms_events_it
+label: 'Events (IT)'
+type: 'canonical_entities:node'
+pattern: '/eventi/[node:title]'
+selection_criteria:
+  df55d3ec-a199-44bb-89c1-51bb0d1d4745:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: df55d3ec-a199-44bb-89c1-51bb0d1d4745
+    context_mapping:
+      node: node
+    bundles:
+      icms_event: icms_event
+  755787e5-29d7-4370-9fee-efe797166e2f:
+    id: language
+    negate: false
+    uuid: 755787e5-29d7-4370-9fee-efe797166e2f
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      it: it
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language
