@@ -27,7 +27,7 @@ third_party_settings:
     title_help: "Main title used for the page's meta, menu label and admin display, provided these are not overridden in the corresponding places."
 name: Event
 type: icms_event
-description: 'Use <em>Events</em> to create and manage scheduled activities with structured data, taxonomy tags, and iCMS layout components.'
+description: 'Use <em>Events</em> to create and manage scheduled activities with structured data, taxonomy tags, and ICMS layout components.'
 help: null
 new_revision: true
 preview_mode: 0
