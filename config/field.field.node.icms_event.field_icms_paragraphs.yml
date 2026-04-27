@@ -10,7 +10,6 @@ dependencies:
     - paragraphs.paragraphs_type.icms_layout_contact
     - paragraphs.paragraphs_type.icms_layout_downloads
     - paragraphs.paragraphs_type.icms_layout_faq
-    - paragraphs.paragraphs_type.icms_layout_flip_teasers
     - paragraphs.paragraphs_type.icms_layout_gallery
     - paragraphs.paragraphs_type.icms_layout_hero_image
     - paragraphs.paragraphs_type.icms_layout_iframe
@@ -18,7 +17,6 @@ dependencies:
     - paragraphs.paragraphs_type.icms_layout_media
     - paragraphs.paragraphs_type.icms_layout_partnerships
     - paragraphs.paragraphs_type.icms_layout_table
-    - paragraphs.paragraphs_type.icms_layout_tabs
     - paragraphs.paragraphs_type.icms_layout_team
     - paragraphs.paragraphs_type.icms_layout_teasers
     - paragraphs.paragraphs_type.icms_layout_testimonial
@@ -27,6 +25,7 @@ dependencies:
     - paragraphs.paragraphs_type.icms_layout_text_image_intro
     - paragraphs.paragraphs_type.icms_layout_text_media
     - paragraphs.paragraphs_type.icms_layout_textcol_iconlist
+    - paragraphs.paragraphs_type.icms_layout_timeline
   module:
     - entity_reference_revisions
     - tmgmt_content
@@ -55,7 +54,6 @@ settings:
       icms_layout_teasers: icms_layout_teasers
       icms_layout_partnerships: icms_layout_partnerships
       icms_layout_testimonials: icms_layout_testimonials
-      icms_layout_flip_teasers: icms_layout_flip_teasers
       icms_layout_2_col_text_elements: icms_layout_2_col_text_elements
       icms_layout_cards: icms_layout_cards
       icms_layout_testimonial: icms_layout_testimonial
@@ -63,12 +61,12 @@ settings:
       icms_layout_textcol_iconlist: icms_layout_textcol_iconlist
       icms_layout_table: icms_layout_table
       icms_layout_faq: icms_layout_faq
-      icms_layout_tabs: icms_layout_tabs
       icms_layout_contact: icms_layout_contact
       icms_layout_call_to_action: icms_layout_call_to_action
       icms_layout_downloads: icms_layout_downloads
       icms_layout_media: icms_layout_media
       icms_layout_iframe: icms_layout_iframe
+      icms_layout_timeline: icms_layout_timeline
       icms_layout_location: icms_layout_location
     negate: 0
     target_bundles_drag_drop:
@@ -86,6 +84,9 @@ settings:
         enabled: false
       icms_card_element:
         weight: -45
+        enabled: false
+      icms_collapsible_element:
+        weight: 50
         enabled: false
       icms_faq_element:
         weight: -42
@@ -105,6 +106,9 @@ settings:
       icms_layout_cards:
         weight: -59
         enabled: true
+      icms_layout_collapsible:
+        weight: 56
+        enabled: false
       icms_layout_contact:
         weight: -52
         enabled: true
@@ -113,9 +117,6 @@ settings:
         enabled: true
       icms_layout_faq:
         weight: -54
-        enabled: true
-      icms_layout_flip_teasers:
-        weight: -61
         enabled: true
       icms_layout_gallery:
         weight: -65
@@ -126,6 +127,9 @@ settings:
       icms_layout_iframe:
         weight: 52
         enabled: true
+      icms_layout_link_lists:
+        weight: 64
+        enabled: false
       icms_layout_location:
         enabled: true
       icms_layout_media:
@@ -136,9 +140,6 @@ settings:
         enabled: true
       icms_layout_table:
         weight: -55
-        enabled: true
-      icms_layout_tabs:
-        weight: -53
         enabled: true
       icms_layout_team:
         weight: -57
@@ -164,6 +165,12 @@ settings:
       icms_layout_textcol_iconlist:
         weight: -56
         enabled: true
+      icms_layout_timeline:
+        weight: -65
+        enabled: true
+      icms_link_list_element:
+        weight: 83
+        enabled: false
       icms_logo_element:
         weight: -41
         enabled: false
@@ -173,13 +180,13 @@ settings:
       icms_partnership_element:
         weight: -37
         enabled: false
-      icms_tab_element:
-        weight: -40
-        enabled: false
       icms_team_element:
         weight: -38
         enabled: false
       icms_testimonial_element:
         weight: -39
+        enabled: false
+      icms_timeline_element:
+        weight: -52
         enabled: false
 field_type: entity_reference_revisions
