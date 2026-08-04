@@ -17,13 +17,13 @@
         "source": "https://github.com/iqual-ch/blokkli-starterkit-sw-experiment"
     },
     "require": {
-        "iqual/blokkli_starterkit": "^1.0",
-        "iqual/icms_bundle_event_logic": "^1.0",
+        "iqual/blokkli_starterkit": "~1.6.0-rc.1",
+        "iqual/icms_bundle_event_logic": "~1.6.0-rc.1",
         "drupal/conditional_fields": "^4.0@alpha",
         "drupal/geolocation": "^4.0@beta",
         "drupal/smart_date": "^4.2",
         "drupal/multiple_fields_remove_button": "^2.3",
-        "drupal/webform": "^6.2",
+        "drupal/webform": "~6.3.0-beta7",
         "drupal/webform_views": "^5.6"
     },
     "version": "1.6.0-rc.1"
