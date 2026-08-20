@@ -18,7 +18,7 @@ install:
   - smart_date
   - schema_event
   - webform
-  - webform_views
+  - webform_node
   # Bundle Logic
   - icms_bundle_event_logic
 
