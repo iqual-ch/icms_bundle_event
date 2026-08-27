@@ -50,6 +50,7 @@ config:
       simple_config_update:
         # Enable custom extensions and fields for events
         schema_configuration.core_composable.extensions.reverse_entity_reference: reverse_entity_reference
+        schema_configuration.core_composable.extensions.icms_event_dates: icms_event_dates
         # icms_event node and its specific fields
         schema_configuration.core_composable.bundles.node.icms_event.enabled: true
         schema_configuration.core_composable.fields.node.field_icms_event_occurrence: field_icms_event_occurrence
