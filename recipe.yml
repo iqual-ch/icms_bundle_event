@@ -43,6 +43,16 @@ config:
   # Add the content type to the editorial workflow
     workflows.workflow.editorial:
       addNodeTypes: [icms_event]
+  # Show the topic color field (shipped by this bundle) on the topics form
+    core.entity_form_display.taxonomy_term.icms_topics.default:
+      setComponent:
+        name: field_icms_color
+        options:
+          type: options_select
+          weight: 2
+          region: content
+          settings: {}
+          third_party_settings: {}
   # Add the content type to the default view mode
   # GraphQL Core Schema
 
@@ -64,3 +74,5 @@ config:
         schema_configuration.core_composable.fields.paragraph.field_icms_address: field_icms_address
         schema_configuration.core_composable.fields.paragraph.field_icms_coordinates: field_icms_coordinates
         schema_configuration.core_composable.fields.paragraph.field_icms_date: field_icms_date
+        # Topic color, used by the calendar display.
+        schema_configuration.core_composable.fields.taxonomy_term.field_icms_color: field_icms_color
