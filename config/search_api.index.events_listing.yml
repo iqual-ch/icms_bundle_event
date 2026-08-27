@@ -44,14 +44,6 @@ field_settings:
     dependencies:
       module:
         - paragraphs
-  langcode:
-    label: 'Language code'
-    datasource_id: 'entity:paragraph'
-    property_path: langcode
-    type: string
-    dependencies:
-      module:
-        - paragraphs
   nid:
     label: 'Parent node ID'
     datasource_id: 'entity:paragraph'
@@ -103,7 +95,6 @@ processor_settings:
     fields:
       - event_date_end
       - event_date_start
-      - langcode
       - nid
       - parent_status
       - parent_topics
@@ -125,7 +116,6 @@ processor_settings:
     fields:
       - event_date_end
       - event_date_start
-      - langcode
       - nid
       - parent_status
       - parent_topics
