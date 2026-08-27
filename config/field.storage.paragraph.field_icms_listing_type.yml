@@ -9,17 +9,8 @@ field_name: field_icms_listing_type
 entity_type: paragraph
 type: list_string
 settings:
-  allowed_values:
-    -
-      value: all
-      label: 'Overview (All)'
-    -
-      value: manual
-      label: 'Topic, Manual'
-    -
-      value: contextual
-      label: 'Topic, Contextual'
-  allowed_values_function: ''
+  allowed_values: {  }
+  allowed_values_function: icms_core_logic_listing_type_allowed_values
 module: options
 locked: false
 cardinality: 1
