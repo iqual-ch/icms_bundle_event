@@ -13,6 +13,7 @@ dependencies:
     - paragraphs.paragraphs_type.icms_layout_gallery
     - paragraphs.paragraphs_type.icms_layout_hero_image
     - paragraphs.paragraphs_type.icms_layout_iframe
+    - paragraphs.paragraphs_type.icms_layout_listing
     - paragraphs.paragraphs_type.icms_layout_location
     - paragraphs.paragraphs_type.icms_layout_media
     - paragraphs.paragraphs_type.icms_layout_partnerships
@@ -52,6 +53,7 @@ settings:
       icms_layout_text_media: icms_layout_text_media
       icms_layout_gallery: icms_layout_gallery
       icms_layout_teasers: icms_layout_teasers
+      icms_layout_listing: icms_layout_listing
       icms_layout_partnerships: icms_layout_partnerships
       icms_layout_testimonials: icms_layout_testimonials
       icms_layout_2_col_text_elements: icms_layout_2_col_text_elements
@@ -131,6 +133,9 @@ settings:
         weight: 64
         enabled: false
       icms_layout_location:
+        enabled: true
+      icms_layout_listing:
+        weight: -73
         enabled: true
       icms_layout_media:
         weight: -49
