@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies:
-  config:
-    - webform.webform.icms_event_registration
   module:
     - csv_serialization
     - rest
@@ -558,15 +556,13 @@ display:
           path_case: none
           transform_dash: false
       filters:
-        webform_id:
-          id: webform_id
+        icms_webform_id:
+          id: icms_webform_id
           table: webform_submission
-          field: webform_id
-          entity_type: webform_submission
-          entity_field: webform_id
-          plugin_id: bundle
-          value:
-            icms_event_registration: icms_event_registration
+          field: icms_webform_id
+          plugin_id: string
+          operator: '='
+          value: icms_event_registration
         webform_submission_value_occurrence:
           id: webform_submission_value_occurrence
           table: webform_submission_field_icms_event_registration_occurrence_id
