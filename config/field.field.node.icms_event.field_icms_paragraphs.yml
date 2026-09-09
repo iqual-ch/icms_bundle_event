@@ -70,6 +70,8 @@ settings:
       icms_layout_iframe: icms_layout_iframe
       icms_layout_timeline: icms_layout_timeline
       icms_layout_location: icms_layout_location
+      icms_layout_anchor: icms_layout_anchor
+      icms_layout_anchor_navigation: icms_layout_anchor_navigation
     negate: 0
     target_bundles_drag_drop:
       blokkli_fragment:
@@ -102,6 +104,12 @@ settings:
       icms_layout_2_col_text_elements:
         weight: -60
         enabled: true
+      icms_layout_anchor:
+        weight: -57
+        enabled: true
+      icms_layout_anchor_navigation:
+        weight: -56
+        enabled: true
       icms_layout_call_to_action:
         weight: -51
         enabled: true
@@ -132,10 +140,10 @@ settings:
       icms_layout_link_lists:
         weight: 64
         enabled: false
-      icms_layout_location:
-        enabled: true
       icms_layout_listing:
         weight: -73
+        enabled: true
+      icms_layout_location:
         enabled: true
       icms_layout_media:
         weight: -49
