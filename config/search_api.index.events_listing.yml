@@ -52,8 +52,8 @@ field_settings:
     dependencies:
       module:
         - paragraphs
-  parent_id:
-    label: 'Parent ID'
+  nid:
+    label: 'Parent node ID'
     datasource_id: 'entity:paragraph'
     property_path: parent_id
     type: string
@@ -104,7 +104,7 @@ processor_settings:
       - event_date_end
       - event_date_start
       - langcode
-      - parent_id
+      - nid
       - parent_status
       - parent_topics
     title: true
@@ -126,7 +126,7 @@ processor_settings:
       - event_date_end
       - event_date_start
       - langcode
-      - parent_id
+      - nid
       - parent_status
       - parent_topics
   language_with_fallback: {  }
