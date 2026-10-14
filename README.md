@@ -28,3 +28,30 @@ make the selector language-dependent. An event with several topics carries all
 of their classes, so the usual cascade decides when two of them are colored.
 Teaser cards carry the class but paint nothing with it, so a listing only
 changes appearance if a project opts in.
+
+### Calendar settings
+
+The "Calendar" display of the event layout block is tuned per project through the
+config object `icms_bundle_event_logic.calendar_settings` (no admin UI):
+
+```bash
+drush config:set icms_bundle_event_logic.calendar_settings week_start 7
+```
+
+Keys: `week_start` (1 = Monday … 7 = Sunday), `show_topic_filter`,
+`max_events_per_day`, `show_event_time`.
+
+### Registrations
+
+Registrations are Webform submissions attached to the event node. Editors find them
+on the event's **Results** tab: one event date at a time, one row per person (the
+newest submission wins), searchable, and downloadable as a CSV of exactly what is on
+screen. Access follows the registration form's own access rules (**Settings →
+Access**), not a permission.
+
+A form counts as a registration form when it has the `node_id` and `occurrence_id`
+elements, so duplicated forms get the same screen. Its results table is kept in sync
+with the form's elements on every save, unless an editor saves a customized table
+(**Results → Customize**) as the default for everyone. To hand it back, clear that
+customization and re-save the form. Projects change the listing by overriding
+`results()` and `skippedColumns()` of `EventRegistrationsController`.
