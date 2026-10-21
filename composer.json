@@ -25,5 +25,5 @@
         "drupal/multiple_fields_remove_button": "^2.3",
         "drupal/webform": "^6.2"
     },
-    "version": "1.6.2-rc.3"
+    "version": "1.x-dev"
 }
