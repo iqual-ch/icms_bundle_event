@@ -601,6 +601,7 @@ content:
         bounceAtZoomLimits: true
       allow_override_map_settings: 0
       hide_inputs: false
+      set_result_on_geocode: true
       centre:
         fit_bounds:
           enable: true
